@@ -1,39 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
-</head>
-<body>
-
-    <script>
-    var config = {
-        type: Phaser.AUTO,
-        width: 800,
-        height: 600,
-        physics: {
-            default: 'arcade',
-            arcade: {
-                gravity: { y: 200 }
-            }
-        },
-        scene: {
-            preload: preload,
-            create: create
-        }
-    };
-
-    var game = new Phaser.Game(config);
-
-    function preload ()
-    {
-        this.load.image('testGuy', 'img/placeholderCrawl.png');
-    }
-
-    function create ()
-    {
-        this.add.image(400, 300, 'testGuy');
-    }
-    </script>
-
-</body>
+  <head>
+    <title>HTML Page</title>
+  </head>
+  <body>
+    <!-- This is a comment -->
+    <header>
+      BeanBoy LLC
+    </header>
+    <div>
+      <div>
+        <h1>Large headings are cool</h1>
+      
+        <h2>Smaller headings h2</h2>
+      
+        <h6>This is a smoll h6</h6>
+      </div>
+      <div>
+        <p> This is a paragraph tag. You use it to make paragraphs</p>
+        <p> This is a long thing, it is <span>pretty</span> long. Not as long as some things, but it is real long generally speaking. I just needed a placeholder. Lorem Ispum and whatnot. I'm not very hungry right now</p>
+      </div>
+    </div>
+    
+    <ol>
+      <li>Get ingredients for spaghetti
+        <ul>
+          <li>San Marzanos</li>
+          <li>Ground Beef</li>
+          <li>Tomatio Paste</li>
+        </ul>
+      </li>
+      <li>Do something cool</li>
+      <li>Practice HTML</li>
+    </ol>
+    <br/>
+    <a href="subpages/page_2.html" target="_blank">link</a>
+    <br/>
+    
+    <form>
+      <div>
+        <label for="username">username</label>
+        <input name="username" type="text"/>
+      </div>
+      <div>
+        <label for="pass">password</label>
+        <input name="pass" type="password"/>
+      </div>
+      <input type="submit"/><br>
+      <button>Log In (Real One)</button><br/>
+      <input name="check1" type="checkbox"/>
+      <input type="radio"/>
+      <select>
+        <option>--Select--</option>
+        <option>Beano</option>
+        <option>Beanie</option>
+        <option>Beanlet</option>
+      </select>
+    </form>
+    
+    <br/>
+    <table>
+      <tr>
+        <th>Desk Items</th>
+      </tr>
+      <tr>
+        <td>Saucer</td>
+        <td>Weight</td>
+      </tr>
+      <tr>
+        <td>Headphones</td>
+        <td>Glass Cup</td>
+      </tr>
+      <tr>
+        <td>Pencils</td>
+        <td>Calculator</td>
+      </tr>
+    </table>
+    <br/>
+    <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/10/23/0/fnd_pasta-istock.jpg.rend.hgtvcom.616.462.suffix/1445621493536.jpeg" alt="delicous-spaghetti"/>
+    <footer>Footer? I hardly even KNOW her</footer>
+  </body>
 </html>
