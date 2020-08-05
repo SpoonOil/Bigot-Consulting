@@ -50,6 +50,13 @@
     }
     return 0;
   }
+  function PlaySound(sound)
+  {
+      console.log('this is running');
+      var path = "audio/";
+      var snd = new Audio(path + sound + ".mp3");
+      snd.play();
+  }
   </script>
     <!-- This is a comment -->
     <header>
@@ -124,7 +131,7 @@
       </tr>
     </table>
     <br/>
-    <img src="https://fireemblemwiki.org/w/images/thumb/e/e7/Portrait_marianne_02_fe16.png/200px-Portrait_marianne_02_fe16.png" alt="dick and balls too"/>
+    <img src="https://fireemblemwiki.org/w/images/thumb/e/e7/Portrait_marianne_02_fe16.png/200px-Portrait_marianne_02_fe16.png" alt="dick and balls too"/ onclick=PlaySound("halo")>
     <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/10/23/0/fnd_pasta-istock.jpg.rend.hgtvcom.616.462.suffix/1445621493536.jpeg" alt="delicous-spaghetti"/>
     <footer>Footer? I hardly even KNOW her</footer>
   </body>
