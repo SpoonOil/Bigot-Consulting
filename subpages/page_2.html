@@ -11,16 +11,16 @@
   <body>
     <h1>I N F I N I T E  M O N E Y</h1>
     <script>
-    function PlaySound()
+    function PlaySound(sound)
     {
         console.log('this is running');
-        var path = "audio/lego.mp3";
-        var snd = new Audio(path + melody + ".mp3");
+        var path = "audio/";
+        var snd = new Audio(path + sound + ".mp3");
         snd.play();
     }
   </script>
-    <img src="https://media.discordapp.net/attachments/270670857444130816/740367970512928799/inmyroomibeatmy.png?width=469&height=469" onclick="PlaySound()">
+    <img src="https://media.discordapp.net/attachments/270670857444130816/740367970512928799/inmyroomibeatmy.png?width=469&height=469" onclick="PlaySound('lego')">
     <br>
-    <button onclick="PlaySound()">lego</button>
+    <button onclick="PlaySound('lego')">lego</button>
   </body>
 </html>
