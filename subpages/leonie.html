@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<head>
-  <style>body {background-image: url('https://fireemblemwiki.org/w/images/thumb/1/1b/Portrait_leonie_02_fe16.png/200px-Portrait_leonie_02_fe16.png');}</style>
-  <title>Leonie Appreciation Page</head>
+<html>
+  <head>
+    <style>body {background-image: url('https://fireemblemwiki.org/w/images/thumb/1/1b/Portrait_leonie_02_fe16.png/200px-Portrait_leonie_02_fe16.png');}</style>
+    <title>Leonie Appreciation Page</title>
+  </head>
 <body>
-  <script>  function PlayBung(int)
-    {
-      console.log(int);
-      if (int === 0) {
-        audio = "cum"
-      } else if (int===1) {
-        sound = "arse"
-      } else if (int===2) {
-        sound = "humor"
-      }
+    <script>
+      function PlayBung(int)
+      {
+        console.log(int);
+        if (int === 0) {
+          audio = "cum"
+        } else if (int===1) {
+          sound = "arse"
+        } else if (int===2) {
+          sound = "humor"
+        }
         console.log('this is running');
-        var path = "audio/";
-        var snd = new Audio(path + sound + ".mp3");
-        snd.play();
-    }
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * Math.floor(max));
-    }
-  </script>
-  <img src="https://i.kym-cdn.com/photos/images/original/001/576/991/1e1.jpg" onclick=PlayBung(getRandomInt(3))>
+          var path = "audio/";
+          var snd = new Audio(path + sound + ".mp3");
+          snd.play();
+      }
+      function getRandomInt(max)
+      {
+        return Math.floor(Math.random() * Math.floor(max));
+      }
+    </script>
+  <img src="https://i.pinimg.com/originals/cf/65/b2/cf65b20b12c620f9cec1df17cc981219.jpg" onclick=PlayBung(getRandomInt(3))>
 </body>
+</html>
