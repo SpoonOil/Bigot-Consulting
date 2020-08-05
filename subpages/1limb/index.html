@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+</head>
+<body>
+
+    <script>
+    var config = {
+        type: Phaser.AUTO,
+        width: 800,
+        height: 600,
+        physics: {
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 1000 },
+                debug: false
+            }
+        },
+        scene: {
+            preload: preload,
+            create: create,
+            update: update
+        }
+    };
+
+    var game = new Phaser.Game(config);
+    var player;
+    var debugDisplay;
+    var frictionFactor = .9;
+    var maxSpeed = 150;
+    var baseSpd = 5;
+    var enemies;
+    var facing = 'right';
+    var turning = false;
+    function preload ()
+    {
+        this.load.spritesheet('testGuy', 'img/sketchGuy.png', { frameWidth:200, frameHeight: 143 });
+        this.load.spritesheet('test')
+        this.load.image('testPlat', 'img/placeholderPlat.png');
+        this.load.image('testBg', 'img/placeholderBg.png');
+        this.load.image('testEnem', 'img/testEnem.png');
+    }
+
+    function create ()
+    {
+        
+        //BG
+        this.add.image(400, 300, 'testBg');
+        //testplats
+        testPlats = this.physics.add.staticGroup();
+        testPlats.create(400, 500, 'testPlat');
+        //playercode
+        player = this.physics.add.sprite(400, 200, 'testGuy', 1).setScale(0.5);
+        player.setCollideWorldBounds(true);
+
+        this.anims.create({
+            key: 'right',
+            frames: this.anims.generateFrameNumbers('testGuy', { start: 0, end: 1}),
+           frameRate: 10,
+            repeat: 0
+        });
+        this.anims.create({
+            key: 'left',
+            frames: this.anims.generateFrameNumbers('testGuy', { start: 5, end: 6 }),
+            frameRate: 10,
+            repeat: 0
+        });
+        this.anims.create({
+            key: 'turnLeft',
+            frames: this.anims.generateFrameNumbers('testGuy', { start: 1, end: 5}),
+            frameRate: 25,
+            repeat: 0
+        });
+        
+        //colliders
+        this.physics.add.collider(player, testPlats);
+        
+        //cursors
+        cursors = this.input.keyboard.createCursorKeys();
+        
+        //text
+        debugDisplay = this.add.text(0,0, 'bean', { fontSize: '32px', fill: '#000' });
+        
+        
+    }
+    
+    function update ()
+    {
+        if (cursors.left.isDown)
+        {
+            if (player.body.velocity.x > 0)
+            {
+                player.setVelocityX(player.body.velocity.x*(frictionFactor+0.05));
+                player.setVelocityX(player.body.velocity.x-baseSpd);
+                //play turnleft
+            } else {
+                //player.anims.play('left', true);
+            }
+            if (player.body.velocity.x > (0-maxSpeed)) 
+            {
+                player.setVelocityX(player.body.velocity.x-baseSpd);
+            } 
+            
+        }
+        else if (cursors.right.isDown)
+        {
+            if (player.body.velocity.x < 0)
+            {
+                player.setVelocityX(player.body.velocity.x*(frictionFactor+0.05));
+                player.setVelocityX(player.body.velocity.x+baseSpd);
+                //player.anims.playReverse('turnLeft', true);
+            } else {
+                //player.anims.play('right', true);
+            }
+            if (player.body.velocity.x < maxSpeed) 
+            {
+                player.setVelocityX(player.body.velocity.x+baseSpd);
+            }
+            
+        }
+        else
+        {
+            player.setVelocityX(player.body.velocity.x*frictionFactor);
+            player.setVelocityX(Math.floor(player.body.velocity.x*10)/10)
+            if (player.body.velocity.x < 1 && player.body.velocity.x > -1) {
+                player.setVelocityX(0);
+            }
+        }
+        
+        if (cursors.up.isDown && player.body.touching.down)
+        {
+            player.setVelocityY(-200);
+        }
+        debugDisplay.setText(player.body.velocity.x);
+        //animations
+        
+        function faceRight() {
+            player.facing = 'right';
+            player.anims.play('right', true);
+        }
+        
+        function faceLeft() {
+            player.facing = 'left';
+            player.anims.play('left', true);
+        }
+        
+        player.oncomple
+        if (player.body.velocity.x > 30) 
+        {
+            if (player.facing === 'left') 
+            {
+                turning = true;
+                player.anims.playReverse(turnLeft);
+                player.facing = 'right';
+            }
+            else
+            {
+                faceRight();
+            }
+        } 
+        else if (player.body.velocity.x < -30) 
+        {
+            faceLeft();
+        }
+    }
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
