@@ -90,7 +90,10 @@
       location.replace("https://store.steampowered.com/app/586140/BlazBlue_Centralfiction/")
     }
     </script>
-    <img src="https://media.discordapp.net/attachments/270670857444130816/691438461751787570/image0.jpg" onclick="PlaySound('humor')">
+    <img src="https://media.discordapp.net/attachments/270670857444130816/691438461751787570/image0.jpg" onclick="console.log('this is running');
+      var path = "audio/";
+      var snd = new Audio(path + humor + ".mp3");
+      snd.play();">
   </div>
   <h2>Second Header</h2>
   <h3>Thirdddddd Header</h3>
