@@ -4,12 +4,19 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
-      body {background-image: url('https://www.mariowiki.com/images/3/30/LM3GooigiArt2.png');}
+      body {background-image: url('https://cdn.discordapp.com/attachments/270670857444130816/740370662681739264/guigi.png');}
     </style>
     <title>Bigot Guru</title>
   </head>
   <body>
-    <script></script>
-    <img src="https://media.discordapp.net/attachments/270670857444130816/740367970512928799/inmyroomibeatmy.png?width=469&height=469" onclick="myFunction()">
+    <script>
+    function PlaySound()
+    {
+        var path = "audio/lego.mp3";
+        var snd = new Audio(path + melody + ".mp3");
+        snd.play();
+    }
+  </script>
+    <img src="https://media.discordapp.net/attachments/270670857444130816/740367970512928799/inmyroomibeatmy.png?width=469&height=469" onclick="PlaySound()">
   </body>
 </html>
