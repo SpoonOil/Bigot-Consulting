@@ -22,6 +22,13 @@
       h1name = "googi"
     }
   }
+  function PlaySound(sound)
+  {
+      console.log('this is running');
+      var path = "audio/";
+      var snd = new Audio(path + sound + ".mp3");
+      snd.play();
+  }
   function blazblue() {
     location.replace("https://store.steampowered.com/app/586140/BlazBlue_Centralfiction/")
   }
@@ -29,7 +36,7 @@
     <h1 id = "meme" onclick="funny()">Gooigi</h1>
     <button onclick="blazblue()">bean 0</button>
   <div>
-    <img src="https://media.discordapp.net/attachments/270670857444130816/691438461751787570/image0.jpg">
+    <img src="https://media.discordapp.net/attachments/270670857444130816/691438461751787570/image0.jpg" onclick="PlaySound('humor')">
   </div>
   <h2>Second Header</h2>
   <h3>Thirdddddd Header</h3>
