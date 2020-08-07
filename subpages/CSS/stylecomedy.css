@@ -33,6 +33,8 @@ h3 {
 li {
   font-family:Arial;
   list-style-type: square;
-  float:left;
+  float: center;
+  color: white;
+  background-color: blue;
   margin-right:200px;
 }
