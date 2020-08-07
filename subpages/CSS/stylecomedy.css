@@ -30,11 +30,12 @@ h3 {
   display: inline-block;
   width: auto;
 }
+
 body {
   font-family:Verdana;
   list-style-type: square;
-  float: center;
+  text-align: center;
   color: white;
-  background-color: #68557b;
+  background-color: #ab99bd;
   margin-right:200px;
 }
