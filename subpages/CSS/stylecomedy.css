@@ -30,7 +30,7 @@ h3 {
   display: inline-block;
   width: auto;
 }
-li {
+body {
   font-family:Arial;
   list-style-type: square;
   float: center;
