@@ -4,7 +4,7 @@ html {
 body {
   background-image: url('img/manlet.png');
 }
-/* h1 {
+h1 {
   font-size:50px;
   font-weight:bold;
   font-family: 'Raleway', sans-serif; Verdana;
@@ -35,4 +35,4 @@ li {
   list-style-type: square;
   float:left;
   margin-right:200px;
-} */
+}
