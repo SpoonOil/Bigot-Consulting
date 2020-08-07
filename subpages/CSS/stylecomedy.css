@@ -7,7 +7,7 @@ body {
 h1 {
   font-size:50px;
   font-weight:bold;
-  font-family: 'Raleway', sans-serif; Verdana;
+  font-family: Helvetica;
   float:center;
   color:#8B1E3F;
   text-align: center;
@@ -31,10 +31,10 @@ h3 {
   width: auto;
 }
 body {
-  font-family:Arial;
+  font-family:Verdana;
   list-style-type: square;
   float: center;
   color: white;
-  background-color: blue;
+  background-color: #68557b;
   margin-right:200px;
 }
