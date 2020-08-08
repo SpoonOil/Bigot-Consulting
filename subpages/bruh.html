@@ -1,109 +1,51 @@
 <!doctype html>
 <html>
+
 <head>
   <title>Marianne Appreciation Page</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:700%26display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/style.css">
+
 </head>
 
 <body>
   <script>
-  var gooigi = true
-  function funny()
-  {
-    if (h1name = "gooigi")
-    {
-      document.getElementById("meme").innerHTML = "Guigi";
-      h1name = "guigi";
+    function funny() {
+      console.log('funny is running;')
+      if (document.getElementById("meme").innerHTML === "Gooigi") {
+        document.getElementById("meme").innerHTML = "Guigi";
+        h1name = "guigi";
+      } else if (document.getElementById("meme").innerHTML === "Guigi") {
+        document.getElementById("meme").innerHTML = "Gooigi";
+        h1name = "googi";
+      }
     }
-    if (h1name = "guigi"))
-    {
-      document.getElementById("meme").innerHTML = "Gooigi";
-      h1name = "googi"
-    }
-  }
-  function PlaySound(sound)
-  {
+
+    function PlaySound(sound) {
       console.log('this is running');
       var path = "audio/";
       var snd = new Audio(path + sound + ".mp3");
       snd.play();
-  }
-  function blazblue() {
-    location.replace("https://store.steampowered.com/app/586140/BlazBlue_Centralfiction/")
-  }
+    }
+
+    function blazblue() {
+      location.replace("https://store.steampowered.com/app/586140/BlazBlue_Centralfiction/")
+    }
   </script>
-  <div>
-    <script>
-    var gooigi = true
-    function funny()
-    {
-      if (h1name = "gooigi")
-      {
-        document.getElementById("meme").innerHTML = "Guigi";
-        h1name = "guigi";
-      }
-      if (h1name = "guigi"))
-      {
-        document.getElementById("meme").innerHTML = "Gooigi";
-        h1name = "googi"
-      }
-    }
-    function PlaySound(sound)
-    {
-        console.log('this is running');
-        var path = "audio/";
-        var snd = new Audio(path + sound + ".mp3");
-        snd.play();
-    }
-    function blazblue() {
-      location.replace("https://store.steampowered.com/app/586140/BlazBlue_Centralfiction/")
-    }
-    </script>
-    <h1 id = "meme" onclick="funny()">Gooigi</h1>
-    <button onclick="blazblue()">bean 0</button>
+  <h1 id="meme" onclick="funny()">Gooigi</h1>
+  <button onclick="blazblue()">bean 0</button>
+  <img src="https://media.discordapp.net/attachments/270670857444130816/691438461751787570/image0.jpg" onclick="PlaySound('humor');">
+  <div id="randomshit">
+    <h2>Second Header</h2>
+    <h3>Thirdddddd Header</h3>
+    <h3>Fourthhhhhhhhhh Header!!!</h3>
+    <p>PARAGRAPH BAYBEEEEEEEE</p>
+    <ul>
+      <li>Bean 1</li>
+      <li>Bean 2</li>
+      <li>Bean 3</li>
+    </ul>
   </div>
-  <div>
-    <script>
-    var gooigi = true
-    function funny()
-    {
-      if (h1name = "gooigi")
-      {
-        document.getElementById("meme").innerHTML = "Guigi";
-        h1name = "guigi";
-      }
-      if (h1name = "guigi"))
-      {
-        document.getElementById("meme").innerHTML = "Gooigi";
-        h1name = "googi"
-      }
-    }
-    function PlaySound(sound)
-    {
-        console.log('this is running');
-        var path = "audio/";
-        var snd = new Audio(path + sound + ".mp3");
-        snd.play();
-    }
-    function blazblue() {
-      location.replace("https://store.steampowered.com/app/586140/BlazBlue_Centralfiction/")
-    }
-    </script>
-    <img src="https://media.discordapp.net/attachments/270670857444130816/691438461751787570/image0.jpg" onclick="console.log('this is running');
-      var path = "audio/";
-      var snd = new Audio(path + humor + ".mp3");
-      snd.play();">
-  </div>
-  <h2>Second Header</h2>
-  <h3>Thirdddddd Header</h3>
-  <h3>Fourthhhhhhhhhh Header!!!</h3>
-  <p>PARAGRAPH BAYBEEEEEEEE</p>
-  <ul>
-    <li>Bean 1</li>
-    <li>Bean 2</li>
-    <li>Bean 3</li>
-  </ul>
 </body>
 
 

@@ -40,3 +40,9 @@ li {
   float: left;
   margin-right: 200px;
 }
+
+#randomshit {
+  background: white;
+  /* background: url('../img/MariannePre.png') */
+  width: 30%;
+}
