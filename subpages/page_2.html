@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="../css/normalize.css">
     <style> body {background-image: url('https://cdn.discordapp.com/attachments/270670857444130816/740370662681739264/guigi.png');}</style>
     <title>Bigot Guru</title>
   </head>
@@ -10,7 +11,7 @@
     function PlaySound(sound)
     {
         console.log('this is running');
-        var path = "audio/";
+        var path = "../audio/";
         var snd = new Audio(path + sound + ".mp3");
         snd.play();
     }

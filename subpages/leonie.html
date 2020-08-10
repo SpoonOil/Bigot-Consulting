@@ -9,21 +9,21 @@
       function PlayBung(int)
       {
         console.log(int);
-        if (int === 0) {
+        if (int === 1) {
           sound = "cum"
-        } else if (int===1) {
-          sound = "arse"
         } else if (int===2) {
+          sound = "arse"
+        } else if (int===3) {
           sound = "humor"
         }
         console.log('this is running');
-          var path = "audio/";
+          var path = "../audio/";
           var snd = new Audio(path + sound + ".mp3");
           snd.play();
       }
       function getRandomInt(max)
       {
-        return Math.floor(Math.random() * Math.floor(max));
+        return 1+Math.floor(Math.random() * Math.floor(max));
       }
     </script>
   <img src="https://i.pinimg.com/originals/cf/65/b2/cf65b20b12c620f9cec1df17cc981219.jpg" onclick=PlayBung(getRandomInt(3))>
