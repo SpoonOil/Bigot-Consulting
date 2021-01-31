@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/taokaka.css">
+  <meta charset="utf-8">
+  <title>Evyn's Paint Corner</title>
+</head>
+oh man plz halp am bad with computers
+<body>
+  <script>
+    var song = "";
+    function PlaySound(sound) {
+      console.log('this is running');
+      var path = "../audio/";
+      var snd = new Audio(path + sound + ".mp3");
+      snd.play();
+    }
+    function PickSong() {
+      var num = Math.floor(Math.random() * 100);
+      console.log(num)
+      if (num < 76) {
+        return "tem";
+      } else if ((num > 75) && (num < 100)) {
+        return "gcfrlg"
+      } else if (num == 99) {
+        return "scary"
+      } else if (num == 100) {
+        return "mystery"
+      }
+    }
+    song = PickSong();
+    PlaySound(song);
+  </script>
+  <br>
+  <h1 style="font-family:verdana">Evyn's Paint Corner Do Not Steal</h1>
+  <img src="../img/elmoloaf.png" alt="eloaf" onclick=PlaySound("fart")>
+  <img src="../img/homer.png" alt="homy" onclick=PlaySound("fart")>
+  <img src="../img/bokemons.png" alt="pkm" onclick=PlaySound("fart")>
+  <img src="../img/weh.png" alt="wario" onclick=PlaySound("memefart")>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h6 class="bigdick">My dick is also large i am just a machine in the cog i dont know coding this isnt my website</h6>
+</body>
+
+</html>
