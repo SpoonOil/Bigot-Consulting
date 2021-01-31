@@ -30,3 +30,11 @@ body {
   border-left-width: 3px;
   border-left-color: #2cabab;
 }
+
+.complaints {
+  background: maroon;
+  color: white;
+  padding: 20px;
+  width: 410px;
+  margin: 0;
+}
