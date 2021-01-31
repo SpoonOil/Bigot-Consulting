@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/taokaka.css">
+  <meta charset="utf-8">
+  <title>Complaints Page</title>
+</head>
+<body>
+  <script>
+    function PlaySound(sound) {
+      console.log('this is running');
+      var path = "../audio/";
+      var snd = new Audio(path + sound + ".mp3");
+      snd.play();
+    }
+    PlaySound("snore");
+  </script>
+
+  <h1> Put your complaint here </h1>
+  <h3> Please be quiet, Sean is sleeping </h3>
+
+  <img src="../img/Sheen.jpg" alt="SeanSleeping">
+  <input type="text" id="lname" name="lname">
+  <button onclick = "location.replace('subpages/complaints.html')"> Send Complaint </button>
+
+</body>
+
+</html>
